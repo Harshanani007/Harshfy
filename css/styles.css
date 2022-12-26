@@ -1,0 +1,9 @@
+/*we are using single style sheet but in very complex projects we are going to split the css and then combine using css preprocessors sas or las
+we use root element to represent html elements for global variables or custom properties */
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+}
