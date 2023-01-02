@@ -8,6 +8,7 @@ we use root element to represent html elements for global variables or custom pr
   --color-body: #918ca4;
 }
 
+/*Typography*/
 html {
   /*62.5% of 16px = 10x*/
   font-size: 62.5%;
@@ -63,5 +64,34 @@ space after the content alternatively*/
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/*Links */
+a {
+  text-decoration: none; /*no underline for the links*/
+}
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  /*this is not the repeating code as there are only few lines to repeat and giving in different media
+  query is best practice*/
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
