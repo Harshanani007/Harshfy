@@ -7,3 +7,61 @@ we use root element to represent html elements for global variables or custom pr
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+
+html {
+  /*62.5% of 16px = 10x*/
+  font-size: 62.5%;
+}
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  /*1 x size of the size*/
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/*after a wide analysis i come through an observation that the user agent stylesheet is assigning the properties like margin start end by itself and they are 
+considering the font size of the elements to compute
+margin of the element starts from the content of a html element and from taking some extra 
+space after the content alternatively*/
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
