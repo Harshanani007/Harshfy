@@ -156,3 +156,25 @@ a {
     padding-left: 0;
   }
 }
+
+/*icons*/
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+/*here giving the single dash because it is not a skin
+and using here the pixels because the icons wont change the size in all screens
+and here using inline block coz when we keep the icon next to the line we dont want a line break there */
+.icon-container {
+  background: #f3f9f8;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
