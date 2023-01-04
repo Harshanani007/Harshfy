@@ -6,6 +6,8 @@ we use root element to represent html elements for global variables or custom pr
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
 *,
@@ -255,8 +257,8 @@ and here using inline block coz when we keep the icon next to the line we dont w
 /*inputs*/
 .input {
   padding: 1.5rem 3.5rem;
-  border: 1px solid #ccc;
-  border-radius: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
   outline: 0;
   color: var(--color-headings);
   font-size: 2rem;
@@ -264,6 +266,27 @@ and here using inline block coz when we keep the icon next to the line we dont w
 
 ::placeholder {
   color: #cdcbd7; /*the placeholder color is dark and the larger than our design so we use pseudo element*/
+}
+
+/*inputgroup
+#ccc this is the color we used for the inputs too so we give it to the color palette
+and the border-radius too we give in the root
+after two lines border and border-radius we get a weird layout so we remove border for the input element
+*/
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
