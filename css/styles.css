@@ -250,3 +250,24 @@ and here using inline block coz when we keep the icon next to the line we dont w
     font-size: 1.5rem;
   }
 }
+
+/*inputs*/
+/*inputs*/
+.input {
+  padding: 1.5rem 3.5rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: 0;
+  color: var(--color-headings);
+  font-size: 2rem;
+}
+
+::placeholder {
+  color: #cdcbd7; /*the placeholder color is dark and the larger than our design so we use pseudo element*/
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
