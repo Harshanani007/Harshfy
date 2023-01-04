@@ -72,5 +72,40 @@
       />
       <button class="btn btn--accent">Search</button>
     </div>
+    <!--cards should have a header round corner and shadow around
+    we keep the entire card container inside another container because the card should be flexible based on the outside container-->
+    <div style="width: 50%; padding: 4rem">
+      <div class="card card--secondary">
+        <header class="card__header">Card Title</header>
+        <div class="card__body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum
+          ducimus consectetur delectus sit deleniti consequatur, animi vitae
+          molestiae a!
+        </div>
+      </div>
+    </div>
+    <!--plan component contains a card with header include badges, and button at the end-->
+    <div class="plan">
+      <div style="width: 50%; padding: 4rem">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Entry</h3>
+            <span class="plan__price">$14</span>
+            <span class="plan__billing-cycle">/month</span>
+            <span class="badge badge--secondary badge--small">10% OFF</span>
+            <span class="plan__description">East Start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Storage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
