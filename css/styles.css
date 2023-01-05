@@ -182,7 +182,7 @@ a {
 }
 
 .icon--white {
-  fill: white;
+  fill: #fff;
 }
 /*here giving the single dash because it is not a skin
 and using here the pixels because the icons wont change the size in all screens
@@ -556,4 +556,38 @@ after two lines border and border-radius we get a weird layout so we remove bord
     justify-self: start;
     margin: 0 2rem;
   }
+}
+/*collapsibles
+after setting the animation to the chevron, for animating content area there is a problem we have set the display to block or none based on the
+state of the collapsible unfortunately we cant apply the transition to the content so there is a trick we apply a max-height = 0 then we have overflow
+so to hide the content we have to give hidden these rules are for collapsed state and for expanded we change these  */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between; /*this pushes content to the edges and add space between*/
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh; /*if we use height it takes the entire viewport*/
+  opacity: 1;
 }

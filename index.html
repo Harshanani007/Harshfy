@@ -229,5 +229,39 @@
         <a href="#" class="btn btn--secondary btn--streched">Get Started</a>
       </div>
     </div>
+    <!--collapsibles
+    every collapsible has two sections a header and a body, in heading we have heading and a icon  
+    this is simple before the user click on it, it displays nothing and after it shows the content so
+    we have to insert the collapsible--expanded class dynamically using js after user clicks on it
+    the code describes all collapsible components is stored in a constant and we iterate over it and we add an event listener to each
+    using that we register a function to be called when it is clicked and we toggle to the classlist if it exits it will remove if not if will add 
+    we add the js file at the end of the file we dont want the rendering the page by using this file-->
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item1</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        repellendus ipsa at placeat sit qui possimus, tempore autem. Debitis,
+        modi!
+      </div>
+    </div>
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item1</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        repellendus ipsa at placeat sit qui possimus, tempore autem. Debitis,
+        modi!
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
