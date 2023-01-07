@@ -631,6 +631,7 @@ so to hide the content we have to give hidden these rules are for collapsed stat
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
