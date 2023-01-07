@@ -339,6 +339,9 @@ after two lines border and border-radius we get a weird layout so we remove bord
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
@@ -348,6 +351,9 @@ after two lines border and border-radius we get a weird layout so we remove bord
   background: #02cdf1;
 }
 /*plans*/
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -378,6 +384,10 @@ after two lines border and border-radius we get a weird layout so we remove bord
   letter-spacing: 1px;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -390,6 +400,15 @@ after two lines border and border-radius we get a weird layout so we remove bord
   top: -6px;
   right: 5%;
 }
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -720,4 +739,14 @@ in the collapsible--expanded class we gave two classes selectors*/
     text-align: left;
     align-self: center;
   }
+}
+/*plans block 
+named block-plans in reverse order because we are gonna see all kinds of blocks*/
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
