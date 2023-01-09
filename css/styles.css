@@ -213,7 +213,7 @@ and here using inline block coz when we keep the icon next to the line we dont w
   cursor: pointer; /*this makes the cursor to pointer on hovering*/
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
@@ -314,6 +314,7 @@ after two lines border and border-radius we get a weird layout so we remove bord
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 1rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -751,6 +752,34 @@ in the collapsible--expanded class we gave two classes selectors*/
     align-self: center;
   }
 }
+
+/* Domain Block */
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  color: var(--color-headings);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
 /*plans block 
 named block-plans in reverse order because we are gonna see all kinds of blocks*/
 .block-plans .grid {
