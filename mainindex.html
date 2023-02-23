@@ -23,6 +23,279 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <!--we have to give source control here and initialize a git repository and it tracks our project history so everytime we write
+    a code we snapshot it and store in the repository and we can see the history of what changes we have made and everytime we commit a change we type some meaningfull message in it
+    identifying components we have 2 col and 3 col grids in the page and 
+    media object or media component is the icon heading and text 
+  
+    color palette we have to identify primary secondary accent here we pick lighter blue as primary skyblue as secondary and orange as accent
+    h${Heading $}*3 and press tab-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+      similique accusantium libero repudiandae. Magnam illo qui quis, distinctio
+      consectetur nostrum!
+    </p>
+    <a href="#" class="link-arrow">Learn More</a>
+    <span class="badge badge--secondary badge--small">10% off</span>
+
+    <!-- ul.list>li{Item $}*3 -->
+    <ul class="list list--inline">
+      <li class="list__item">Item 1</li>
+      <li class="list__item">Item 2</li>
+      <li class="list__item">Item 3</li>
+    </ul>
+    <ul class="list list--tick">
+      <li class="list__item">Item 1</li>
+      <li class="list__item">Item 2</li>
+      <li class="list__item">Item 3</li>
+    </ul>
+    <!--icons use the proper path otherwise it wont work
+    dont create over skins it is waste of time-->
+    <span class="icon-container">
+      <svg class="icon">
+        <use xlink:href="images/sprite.svg#wordpress"></use>
+      </svg>
+    </span>
+    <!--buttons 
+    two types of buttons in color and two types in size filling the entire container called block buttons-->
+    <button class="btn btn--primary btn--block">buy now</button>
+    <a href="#" class="btn btn--outline btn--block">buy now</a>
+    <!--inputs-->
+    <input type="text" class="input" placeholder="Enter domain name here..." />
+    <!--input_groups to put a button inside the input
+    we can also keep a icon inside this is the benefit of the bottom up approach builiding components first-->
+    <div class="input-group">
+      <span class="icon-container">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#wordpress"></use>
+        </svg>
+      </span>
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter domain name here..."
+      />
+      <button class="btn btn--accent">Search</button>
+    </div>
+    <!--cards should have a header round corner and shadow around
+    we keep the entire card container inside another container because the card should be flexible based on the outside container-->
+    <div style="width: 50%; padding: 4rem">
+      <div class="card card--secondary">
+        <header class="card__header">Card Title</header>
+        <div class="card__body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum
+          ducimus consectetur delectus sit deleniti consequatur, animi vitae
+          molestiae a!
+        </div>
+      </div>
+    </div>
+    <!--plan component contains a card with header include badges, and button at the end-->
+    <div style="width: 50%; padding: 4rem">
+      <div class="plan">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Entry</h3>
+            <span class="plan__price">$14</span>
+            <span class="plan__billing-cycle">/month</span>
+            <span class="badge badge--secondary badge--small">10% OFF</span>
+            <span class="plan__description">East Start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Storage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--popular badge-->
+    <div style="width: 50%; padding: 4rem">
+      <div class="plan plan--popular">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <!-- <img class="" src="images/popular.svg" alt="" /> -->
+            <h3 class="plan__name">Entry</h3>
+            <span class="plan__price">$14</span>
+            <span class="plan__billing-cycle">/month</span>
+            <span class="badge badge--secondary badge--small">10% OFF</span>
+            <span class="plan__description">East Start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Storage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--media objects icon after a heading and the description officially used in all social media -->
+    <div class="media">
+      <div class="media__image">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#snap"></use>
+        </svg>
+      </div>
+      <div class="media__body">
+        <h3 class="media__title">Easy Start & Manged updates</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam aperiam
+          enim doloribus quidem consequuntur velit distinctio quos dignissimos
+          accusantium tempore?
+        </p>
+      </div>
+    </div>
+    <!--quotes
+    quotes need not to be included with image
+    footer can be included in anything-->
+    <blockquote class="quote">
+      <p class="quote__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat
+        voluptate, tempore debitis dignissimos molestiae recusandae
+        exercitationem doloribus fuga deleniti.
+      </p>
+      <footer>
+        <div class="media">
+          <div class="media__image">
+            <svg class="icon icon-- primary quote__line">
+              <use xlink:href="images/sprite.svg#line"></use>
+            </svg>
+          </div>
+          <div class="media__body">
+            <h3 class="media__title quote__author">John Smith</h3>
+            <p class="quote__organization">ABC Company</p>
+          </div>
+        </div>
+      </footer>
+    </blockquote>
+    <!--grid component mobile single colum and desktop double -->
+    <div class="grid grid--1x2">
+      <div style="height: 100px; background: gold"></div>
+      <div style="height: 100px; background: dodgerblue"></div>
+    </div>
+    <div class="grid grid--1x3">
+      <div style="height: 100px; background: red"></div>
+      <div style="height: 100px; background: pink"></div>
+      <div style="height: 100px; background: green"></div>
+    </div>
+
+    <!--testimonials-->
+    <div class="card testimonial">
+      <div class="grid grid--1x2">
+        <div class="testimonial__image">
+          <img src="images/testimonial.jpg" alt="A Happy smiling customer" />
+          <span class="icon-container icon-container--accent">
+            <svg class="icon--small icon--white">
+              <use xlink:href="images/sprite.svg#quotes"></use>
+            </svg>
+          </span>
+        </div>
+        <blockquote class="quote">
+          <p class="quote__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            quaerat voluptate, tempore debitis dignissimos molestiae recusandae
+            exercitationem doloribus fuga deleniti.
+          </p>
+          <footer>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon-- primary quote__line">
+                  <use xlink:href="images/sprite.svg#line"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title quote__author">John Smith</h3>
+                <p class="quote__organization">ABC Company</p>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <!--callout is different from cards
+    -->
+    <div class="callout callout--primary">
+      <div class="grid grid--1x2">
+        <div class="callout__content">
+          <h2 class="callout__heading">Ready to get started!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            repellat vero possimus earum quas id tempore quidem veniam magnam
+            voluptatibus!
+          </p>
+        </div>
+        <a href="#" class="btn btn--secondary btn--streched">Get Started</a>
+      </div>
+    </div>
+    <!--collapsibles
+    every collapsible has two sections a header and a body, in heading we have heading and a icon  
+    this is simple before the user click on it, it displays nothing and after it shows the content so
+    we have to insert the collapsible--expanded class dynamically using js after user clicks on it
+    the code describes all collapsible components is stored in a constant and we iterate over it and we add an event listener to each
+    using that we register a function to be called when it is clicked and we toggle to the classlist if it exits it will remove if not if will add 
+    we add the js file at the end of the file we dont want the rendering the page by using this file-->
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item1</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        repellendus ipsa at placeat sit qui possimus, tempore autem. Debitis,
+        modi!
+      </div>
+    </div>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item1</h2>
+        <svg class="icon icon--white collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        repellendus ipsa at placeat sit qui possimus, tempore autem. Debitis,
+        modi!
+      </div>
+    </div>
+    <!--blocks
+    we use section 
+    for black containers we give the container class for inside elements-->
+    <section class="block container">
+      <header class="block__header">
+        <div class="container">
+          <h2 class="block__heading">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+            quibusdam ut molestias excepturi blanditiis modi quia accusantium
+            eius reiciendis autem.
+          </p>
+        </div>
+      </header>
+    </section>
+    <section class="block block--dark block--skewed-left">
+      <h2 class="block__heading">Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam
+      </p>
+    </section>
+    <!--navigation bars
+    a logo, toggler button and an unordered list
+    in href / represents the root of the website
+    here i got a big confusion of how the collapsible--expanded class  properties that i gave in style are executing after big search
+    i got to know it coz of js file, simply if any class encounters like collapsible js adds or removes a class called collapsible--expanded on clicking-->
     <nav class="nav collapsible">
       <a class="nav__brand" href="/"><img src="images/logo.svg" alt="" /></a>
       <svg class="icon icon--white nav__toggler">
@@ -57,7 +330,7 @@
       </div>
     </section>
     <!--image resizing
-      we resize the image to make the browser work easy-->
+    we resize the image to make the browser work easy-->
     <!--domain block-->
     <section class="block container block-domain">
       <header class="block__header">
@@ -158,7 +431,7 @@
       </div>
     </section>
     <!--feature block
-      use article for independent self piece of content-->
+    use article for independent self piece of content-->
     <section class="block container">
       <header class="block__header">
         <h2>Host on the Cloud to Keep Growing</h2>
@@ -249,8 +522,8 @@
       </article>
     </section>
     <!--showcase block
-      here i used the div for the media components but there is no meaning in that we have to use list to tell the search engine and screen readers
-      there are list of elements and they are media elements-->
+    here i used the div for the media components but there is no meaning in that we have to use list to tell the search engine and screen readers
+    there are list of elements and they are media elements-->
     <section class="block block--dark block--skewed-right block-showcase">
       <header class="block__header">
         <h2>User-friendly Control Panel</h2>
@@ -372,9 +645,9 @@
       </div>
     </section>
     <!--footer
-      in mobile there are collapsibles but in desktop there are no collapsibles
-    we are giving extra class like footer__heading here because there is a chance of changing the collapsibles in the footer to another components
-    I tried to give the line height in the footer list items but didnt work but ill try a way-->
+    in mobile there are collapsibles but in desktop there are no collapsibles
+  we are giving extra class like footer__heading here because there is a chance of changing the collapsibles in the footer to another components
+  I tried to give the line height in the footer list items but didnt work but ill try a way-->
     <footer class="block block--dark footer">
       <div class="container grid footer__sections">
         <section class="collapsible collapsible--expanded footer__section">
@@ -444,32 +717,32 @@
       </div>
     </footer>
     <!--fixed a layout issue with the search button by setting the width of the btn class to zero and reduced the padding of the search to 4vw horizontal padding
-      for animations installed aos stylesheet with a js file included and use data-aos="" with any class name to make the animation work
-      need to add few meta tags on the top with og(open graph protocol) 
-      html markup validator it said trailing slash on void elements has no effect for this webpage
-      changed the header elements of collapsibles in the footer element
-      in the footer brand class chenged section element to div
-      for the css validator it said calc() using is invalid-->
+    for animations installed aos stylesheet with a js file included and use data-aos="" with any class name to make the animation work
+    need to add few meta tags on the top with og(open graph protocol) 
+    html markup validator it said trailing slash on void elements has no effect for this webpage
+    changed the header elements of collapsibles in the footer element
+    in the footer brand class chenged section element to div
+    for the css validator it said calc() using is invalid-->
     <!--building for production
-      combine css and js files minify js css files like remove extra spaces comments, also optimize images
-      tools webpack problem it has lot of configuration, rollup, parcel is good for beginners 
-      to use parcel install node and node package manager(npm) 
-      initialize    npm init -y (using y here we can skip the questions about name and version ) we will a json file
-      install npm   npm i -D parcel-bundle after this we can see devdependencies in the json file with the name parcel and this library is for 
-      development not for the deployment, using @1.12.4 we can install specified one.
-      parcel is dependent on other libraries and those are dependent on another libraries so we have hundreds of folders
-      we dont want to include these hundreds files in the git repository so we include its name in the git ignore file with a forward slash
-  
-      node_modules/.bin/parcel (in bin we have executable files of the third party dependencies) this way is not good because we have to type everytime for launching website
-      npm i -g parcel-bundler index.html this will install parcel globally we dont have to type node_modules
-      parcel index.html this is enough
-  
-      i deleted a file from the app data it is a parcel.ps1 file after deleting i can be able to host the file at localhost 
-      two folders are included dist and the cache so giving those in the git ignore after giving those all files in the source control folder vanished they were roughly 70 changes
-      parcel build --no-minify index.html this is working but without --no-minify is getting error as tree.render is not a funtion
-      minification in action is not working need to find the error so i found that adding a .htmlnanorc.js with code minifysvg: false works
-      the dist folder has the files with the unique code which prevents the users browsers from caching if we make any changes to it
-    -->
+    combine css and js files minify js css files like remove extra spaces comments, also optimize images
+    tools webpack problem it has lot of configuration, rollup, parcel is good for beginners 
+    to use parcel install node and node package manager(npm) 
+    initialize    npm init -y (using y here we can skip the questions about name and version ) we will a json file
+    install npm   npm i -D parcel-bundle after this we can see devdependencies in the json file with the name parcel and this library is for 
+    development not for the deployment, using @1.12.4 we can install specified one.
+    parcel is dependent on other libraries and those are dependent on another libraries so we have hundreds of folders
+    we dont want to include these hundreds files in the git repository so we include its name in the git ignore file with a forward slash
+
+    node_modules/.bin/parcel (in bin we have executable files of the third party dependencies) this way is not good because we have to type everytime for launching website
+    npm i -g parcel-bundler index.html this will install parcel globally we dont have to type node_modules
+    parcel index.html this is enough
+
+    i deleted a file from the app data it is a parcel.ps1 file after deleting i can be able to host the file at localhost 
+    two folders are included dist and the cache so giving those in the git ignore after giving those all files in the source control folder vanished they were roughly 70 changes
+    parcel build --no-minify index.html this is working but without --no-minify is getting error as tree.render is not a funtion
+    minification in action is not working need to find the error so i found that adding a .htmlnanorc.js with code minifysvg: false works
+    the dist folder has the files with the unique code which prevents the users browsers from caching if we make any changes to it
+  -->
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
